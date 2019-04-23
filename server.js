@@ -4,10 +4,10 @@ const fs  = require('fs');
 
 let app = express();
 
-app.use('/', express.static(__dirname + '/app/'));
+app.use('/', express.static(__dirname + '/dist/'));
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/app/index.html');
+  res.sendFile(__dirname + '/dist/index.html');
 });
 
 app.get('/passwords', function (req, res) {
@@ -21,5 +21,9 @@ app.get('/passwords', function (req, res) {
   src.pipe(res);
 });
 
+
+app.get('/bloomfilter.js', function(req, res) {
+  res.sendFile(__dirname + '/node_modules/bloomfilter.js/index.js');
+});
 app.listen(3000, () => console.log('booting server...'));
 

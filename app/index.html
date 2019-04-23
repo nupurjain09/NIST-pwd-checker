@@ -3,24 +3,17 @@
   <head>
     <meta charset="UTF-8">
     <title>pwned</title>
-    <script>
-      (()=> {
-        async function fetchPws() {
-          const response = await fetch("http://localhost:3000/passwords");
-          const passwords = await response.text();
-          // TODO: parse and store passwords.
-        };
-        fetchPws();
-      })();
+    <script src="bundle.js">
     </script>
   </head>
   <body>
     <h1>NIST Password Validator</h1>
     <div>
       Password:
-      <input type="password" autocomplete="off" required>
-      <input type="submit" value="Check">
+      <input type="password" autocomplete="off" required id="password" autofocus minlength="8" maxlength="64">
+      <input type="submit" value="Check" id="button">
     </div>
+    <div id="message"></div>
   </body>
 </html>
 

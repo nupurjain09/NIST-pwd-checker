@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/the-infatuation/nist-web-boilerplate.git"
@@ -18,6 +15,20 @@
   },
   "homepage": "https://github.com/the-infatuation/nist-web-boilerplate#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "bloomfilter.js": "^1.0.0",
+    "express": "^4.16.3",
+    "jquery": "^3.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "file-loader": "^3.0.1",
+    "mocha": "^6.1.4",
+    "mocha-loader": "^2.0.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "worker-loader": "^2.0.0"
+  },
+  "scripts": {
+    "test": "webpack-dev-server \"mocha-loader!./test/test.js\" --output-file testBundle.js"
   }
 }
