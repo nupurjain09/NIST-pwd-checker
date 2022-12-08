@@ -16,7 +16,7 @@
   "homepage": "https://github.com/the-infatuation/nist-web-boilerplate#readme",
   "dependencies": {
     "bloomfilter.js": "^1.0.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "jquery": "^3.4.0"
   },
   "devDependencies": {
